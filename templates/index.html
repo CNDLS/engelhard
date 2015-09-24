@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+
+{% block secondary_nav %}
+        <div id="itel-nav">
+          <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+            <div class="container">
+              <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('index') }}"><h1>The Engelhard Project for Connecting Life and Learning</h1></a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  <li class="hidden">
+                    <a href="#page-top"></a>
+                  </li>
+                  <li class="page-scroll">
+                    <a href="{{ url_for('page', path='about') }}">About</a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('page', path='history') }}">History</a>
+                  </li>
+                  <li class="page-scroll">
+                    <a href="#profiles">Project Profiles</a>
+                  </li>
+                  <li class="page-scroll">
+                    <a href="{{ url_for('page', path='resources') }}">Resources</a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('page', path='join') }}">Join the Project</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+          </nav>
+        </div>
+{% endblock %}
+
+{% block content %}
+<div id="engelhard-carousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#engelhard-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#engelhard-carousel" data-slide-to="1"></li>
+    <li data-target="#engelhard-carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/67428713" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+    <div class="item">
+      <img src="{{ url_for('static', filename='img/feature-market.jpg') }}" class="img-responsive" />
+      <div class="carousel-caption">
+        <h3>Celebrating Ten Years of the Engelhard Project at Georgetown</h3>
+        <p>Since 2005, the Engelhard Project has enriched the Georgetown experience for thousands of students, faculty, and staff. We are proud to celebrate the first ten years of the Project and are deeply grateful to all those who have made this meaningful work possible.</p>
+      </div>
+    </div>
+    <div class="item">
+      <img src="{{ url_for('static', filename='img/feature-pinkard.jpg') }}" class="img-responsive" />
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#engelhard-carousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#engelhard-carousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<section id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h1 class="padded-multiline"><span>Teaching to the Whole Person</span></h1>
+        <p class="tier-intro">Embodying Georgetown’s mission of <em>cura personalis</em>, and exemplifying the kind of high-impact learning practice that characterizes a Georgetown education, the Engelhard Project represents an innovative approach to integrating student wellness issues into academic contexts.</p>
+        <p><a href="#about"><button class="btn btn-info">Learn more</button></a></p>
+      </div><!-- /.col -->
+      <div class="col-md-8">
+        <img src="{{ url_for('static', filename='img/feature-market.jpg') }}" class="img-responsive" />
+        <h3>Celebrating Ten Years of the Engelhard Project at Georgetown</h3>
+        <p>Since 2005, the Engelhard Project has enriched the Georgetown experience for thousands of students, faculty, and staff. We are proud to celebrate the first ten years of the Project and are deeply grateful to all those who have made this meaningful work possible.</p>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>
+
+<section id="about" class="blue">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>About the Project</h2>
+        <p class="lead">The Engelhard Project for Connecting Life and Learning focuses on teaching to the whole student. By incorporating health and wellness issues into the classroom, the Project fosters academic learning and encourages students to reflect on their own attitudes and behaviors.</p>
+        <p>Using a curriculum infusion approach, Georgetown faculty link academic course content to health and wellness topics through readings, presentations, discussions led by campus health professionals, and reflective writing assignments. In addition, fitting with Georgetown's commitment to social justice, some courses extend this work with involvement in local communities. The project strives to create meaningful connections between faculty, students, and campus health professionals and encourages the practice of one of Georgetown's most important Jesuit principles, <em>cura personalis</em>, or care for the person.</p>
+        <p>The Engelhard Project is made possible by an endowment from the Charles Engelhard Foundation, with additional support from alumni and parents.</p>
+        <p><a href="{{ url_for('page', path='history') }}"><button class="btn btn-info">Read more about the Project's history</button></a></p>
+        <p><a href="{{ url_for('page', path='team') }}"><button class="btn btn-info">Meet the Engelhard Project team</button></a></p>
+      </div><!-- /.col -->
+      <div class="col-md-6">
+        <h2>Ten Years</h2>
+        <p class="lead">What began as a curricular experiment in 2005 has evolved into one of the hallmarks of a Georgetown undergraduate education. Since the project’s inception, <strong>9,874</strong> students have taken <strong>358</strong> Engelhard courses taught by more than <strong>XYZ</strong> faculty members in over <strong>28</strong> departments across campus.</p>
+        <p><a href="/static/itel-report.pdf">Download the Engelhard Ten Years report (2.5 MB PDF)</a> or read below:</p>
+        <div data-configid="14775960/30253415" style="width:525px; height:340px;" class="issuuembed"></div><script type="text/javascript" src="//e.issuu.com/embed.js" async="true"></script></div>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>
+
+<section id="profiles">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Project Profiles</h2>
+        <div class="row">
+          <div class="col-md-3">
+            <img src="{{ url_for('static', filename='img/feature-market.jpg') }}" class="img-responsive" />
+            <h3>Maria Donoghue</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="col-md-3">
+            <img src="{{ url_for('static', filename='img/feature-market.jpg') }}" class="img-responsive" />
+            <h3>Anne Rosenwald</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="col-md-3">
+            <img src="{{ url_for('static', filename='img/feature-market.jpg') }}" class="img-responsive" />
+            <h3>Farmers Market</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="col-md-3">
+            <img src="{{ url_for('static', filename='img/feature-market.jpg') }}" class="img-responsive" />
+            <h3>Faculty Profile</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+</section>
+{% endblock %}
+
+{% block postscript %}
+<script type="text/javascript">
+$(document).ready(function() {
+  // smooth scrolling
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top - 75
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+});
+</script>
+{% endblock %}

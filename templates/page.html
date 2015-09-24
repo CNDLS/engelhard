@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ | {{ page.title }}
+{% endblock %}
+
+{% block secondary_nav %}
+        <div id="itel-nav" class="inside-top">
+          <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse" role="navigation">
+            <div class="container">
+              <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                  <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </button>
+                <a class="navbar-brand" href="{{ url_for('index') }}"><h1>The Engelhard Project for Connecting Life and Learning</h1></a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  <li class="hidden">
+                    <a href="#page-top"></a>
+                  </li>
+                  <li class="page-scroll">
+                    <a href="/#about">About</a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('page', path='history') }}">History</a>
+                  </li>
+                  <li class="page-scroll">
+                    <a href="/#profiles">Project Profiles</a>
+                  </li>
+                  <li class="page-scroll">
+                    <a href="{{ url_for('page', path='resources') }}">Resources</a>
+                  </li>
+                  <li>
+                    <a href="{{ url_for('page', path='join') }}">Join the Project</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+          </nav>
+        </div>
+{% endblock %}
+
+{% block content %}
+<section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      {{ page.body|safe }}
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+</div><!-- /.container -->
+</section>
+{% endblock %}

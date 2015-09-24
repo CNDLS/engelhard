@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "DINOffcCondMedi";
+  src: url('DINOffc-CondMedi.ttf');
+}
+
+@font-face {
+  font-family: "DINOffcLight";
+  src: url('DINOffc-Light.ttf');
+}
+
+@font-face {
+  font-family: "DINOffcBold";
+  src: url('DINOffc-Bold.ttf');
+}
+
+body {
+  padding-top: 78px;
+}
+
+header #georgetown {
+  background: #444444;
+  text-align: right;
+  padding: 4px 0;
+}
+header #cndls nav {
+  background: #000;
+}
+header #cndls nav .navbar-brand {
+  background: #0083b6;
+  padding: 8px 20px;
+  margin-left: 0;
+}
+header #cndls .dropdown-toggle {
+  font-family: "DINOffcCondMedi";
+  text-transform: uppercase;
+  color: #999999;
+  font-size: 17px;
+  line-height: 20px;
+}
+header #cndls li a:hover {
+  color: #fff;
+}
+header #cndls .dropdown-menu {
+  border-top: 0;
+  padding-bottom: 12px;
+}
+header #cndls .dropdown-menu li.nav-header {
+  font-family: "DINOffcCondMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #0083b6;
+  margin-top: 9px;
+  padding: 3px 20px;
+}
+header #cndls .dropdown-menu a:hover {
+  background-color: #0083b6;
+}
+header #cndls .navbar-form {
+  padding: 5px 0 0 0;
+}
+header #cndls .open > a {
+  background-color: #222;
+}
+header #cndls form#search.navbar-form input {
+  background: #333;
+  border-color: #444;
+  border-width: 1px;
+  color: #999;
+}
+section {
+  padding: 40px 0;
+}
+section h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  padding-bottom: 15px;
+}
+section.splash {
+  padding: 0;
+}
+section.title {
+  padding: 15px 0;
+  box-shadow: inset 0 0 20px #ccc;
+}
+section.title h1 {
+  font-family: "DINOffcCondMedi";
+  text-transform: uppercase;
+  font-size: 48px;
+  margin: 0;
+  color: #666;
+}
+section.intro {
+  background: #0083b6;
+  color: #fff;
+}
+section.intro p.lead {
+  font-size: 42px;
+}
+footer #subnav {
+  background: #333;
+  padding: 30px 0;
+}
+footer #subnav h1 a {
+  color: #0083b6;
+  font: 21px "DINOffcCondMedi";
+  text-transform: uppercase;
+}
+footer #subnav li.nav-header {
+  font-family: "DINOffcCondMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #999999;
+  margin-top: 9px;
+  letter-spacing: 1px;
+}
+footer #subnav li a {
+  color: #666;
+  font-size: 0.9em;
+  line-height: 1.3em;
+  display: block;
+  padding: 3px 0;
+}
+footer #subnav li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
