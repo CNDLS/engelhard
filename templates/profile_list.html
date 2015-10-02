@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ | Profiles
+{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block content %}
+<section>
+<div class="container">
+  <h1>Project Profiles</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+      {% for profile in profiles %}
+        <div class="grid-item panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">{{ profile.title }}</h2>
+          </div>
+          <div class="panel-body">
+            <h3>{{ profile.faculty }}, {{ profile.department }}</h3>
+            <p class="muted">Well-being topics: {{ profile.topic|join(', ')|lower }}</ul>
+            <hr />
+            <p>{{ profile.body|safe }}</p>
+          </div>
+        </div>
+      {% endfor %}
+      </div><!-- /.grid -->
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+</div><!-- /.container -->
+</section>
+{% endblock %}
+
+{% block postscript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+
+<script type="text/javascript">
+var $container = $('.grid').imagesLoaded( function() {
+  $container.isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    layoutMode: 'masonry',
+    masonry: {
+      columnWidth: '.grid-sizer',
+      gutter: '.gutter-sizer',
+    },
+  });
+});
+</script>
+{% endblock %}

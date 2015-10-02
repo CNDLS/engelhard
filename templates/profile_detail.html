@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ | {{ page.title }}
+{% endblock %}
+
+{% block content %}
+<section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h4>Project Profile</h5>
+      <h1 class="project-title">{{ page.title }}</h1>
+      <ul class="list-unstyled project-meta">
+        <li>{{ page.faculty }}</li>
+        <li>{{ page.department }}</li>
+      </ul>
+      
+      <ul class="list-unstyled">
+        {% for topic in page.topic %}
+        <li><span class="label label-default">{{ topic }}</span></li>
+        {% endfor %}
+      </ul>
+    </div><!-- /.col -->
+    <div class="col-md-5 profile-text">
+      {{ page.html|safe }}
+    </div><!-- /.col -->
+    {% if page.quote %}
+    <div class="col-md-4 quote-col">
+      <blockquote>
+        <p>{{ page.quote }}</p>
+        {% if page.quote_attribution %}<footer>{{ page.quote_attribution }}</footer>{% endif %}
+      </blockquote>
+    </div>
+    {% endif %}
+  </div><!-- /.row -->
+</div><!-- /.container -->
+</section>
+{% endblock %}
