@@ -83,6 +83,11 @@ h1, h2, h3, h4, h5, h6, #address, .breadcrumb, .itel-nav {
   font-family: "DINOffcCondMedi", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* new! as/of addition of 'events' page --bg. */
+h1 {
+  font-weight: 400;
+}
+
 /* .page-title {
   color: #fff;
 } */
@@ -459,3 +464,42 @@ p strong {
 .grid p.muted { color: #aaa; font-style: italic; }
 .grid-sizer, .grid-item { width: 32%; }
 .gutter-sizer { width: 2%; }
+
+
+/* events page */
+.row.events-about h4 {
+  margin-top: 24px;
+  padding-bottom: 0;
+}
+.row.events {
+  margin-top: 24px;
+  background-color: #eee;
+  padding: 1em 0;
+}
+.row.events.even {
+  background-color: transparent;
+}
+.row.events h4 {
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+img.event-photo {
+  width: 100%;
+}
+
+.sub-lead { 
+  font-family: "DINOffcLight", sans-serif; 
+  font-size: 1em; 
+  line-height: 1.1em;
+  letter-spacing: 0.25px; 
+  font-weight: 700;
+}
+
+h2.warn {
+  color: red;
+  font
+  font-size: 2em; 
+  letter-spacing: 0.5px; 
+  font-weight: 700;
+}
