@@ -471,6 +471,9 @@ p strong {
   margin-top: 24px;
   padding-bottom: 0;
 }
+.row.events-about {
+  margin-top: 42px;
+}
 .row.events {
   margin-top: 24px;
   background-color: #eee;
@@ -481,9 +484,11 @@ p strong {
   margin-right: -30px;
   margin-left: -30px;
 }
-.row.events h4 {
+.row.events-about h4, .row.events h4 {
   margin-top: 0;
   padding-bottom: 0;
+  font-size: 24px;
+  color: #555;
 }
 
 img.event-photo {
