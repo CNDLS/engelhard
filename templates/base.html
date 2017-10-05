@@ -47,12 +47,12 @@
                     <a href="#page-top"></a>
                   </li>
                   <li class="page-scroll">
-                    <a href="{{ url_for('index') }}#about" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Impact</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Sharing Our Work</a></li>
-                            <li><a href="#">Events</a></li>
+                            <li><a href="{{ url_for('index') }}#about">Impact</a></li>
+                            <li><a href="{{ url_for('page', path='faqs') }}">FAQs</a></li>
+                            <li><a href="{{ url_for('page', path='sharing-our-work') }}">Sharing Our Work</a></li>
+                            <li><a href="{{ url_for('page', path='events') }}">Events</a></li>
                         </ul>
                   </li>
                   <li class="page-scroll">
