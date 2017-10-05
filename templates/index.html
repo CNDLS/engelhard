@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div id="engelhard-carousel" class="carousel slide">
+<div id="engelhard-carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#engelhard-carousel" data-slide-to="0" class="active"></li>
@@ -10,7 +10,8 @@
   </ol>
 
   <!-- Carousel #1: Engelhard Video -->
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner">
+
     <div class="item active embed-responsive">
       <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
@@ -54,6 +55,8 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+ <!--  <a class="left carousel-control" href="#engelhard-carousel" data-slide="prev">&lsaquo;</a>
+  <a class="right carousel-control" href="#engelhard-carousel" data-slide="prev">&lsaquo;</a> -->
 </div>
 
 <section id="about" class="blue">
