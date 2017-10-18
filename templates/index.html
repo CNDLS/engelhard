@@ -21,16 +21,16 @@
       <div class="carousel-caption">
         <h3>About the Project</h3>
           <p>The Engelhard Project is committed to educating the whole Georgetown student by challenging each to reflect more deeply on learning and to connect course content with personal, lived experience.</p>
-        <p><b><a href="/about">Learn more about the Project</a></b> | <b><a href="/faqs">Frequently Asked Questions</a></b></p>
+        <p><b><a href="{{ url_for('index') }}#about">Learn more about the Project</a></b> | <b><a href="/faqs">Frequently Asked Questions</a></b></p>
       </div>
     </div>
 
      <!-- Carousel #3: Engelhard Voices -->
     <div class="item" style="background-image: url('{{ url_for('static', filename='img/RegentsHall.png') }}');">
       <div class="carousel-caption">
-      <h3>Faculty and Student Reflections</h3>
-        <p>“Engelhard allows me to bring my students wholly into the classroom. It’s a core part of what I’m doing in the class and has fortified me as an educator.” - Engelhard Faculty Fellow</p>
-        <p><b><a href="/profiles">Read More Engelhard Voices</a></b> | <b><a href="/profiles">View Past Course Profiles</a></b></p>
+      <h3>Sharing Our work</h3>
+        <p>Over the years, the Engelhard Project continues to grow, reaching more students and classrooms, as well as sharing its stories beyond the Hilltop.</p>
+        <p><b><a href="{{ url_for('page', path='sharing-our-work') }}">Sharing Our Work</a></b> | <b><a href="/profiles">View Past Course Profiles</a></b></p>
       </div>
     </div>
 
