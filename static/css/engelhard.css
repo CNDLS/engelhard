@@ -1,7 +1,10 @@
 /* background */
+@import url('https://fonts.googleapis.com/css?family=Playball');
+
 body {
   font-family: "DINOffcLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 
 p { font-size: 1.1em; }
 
@@ -9,6 +12,11 @@ section#main {
   min-height: 600px;
   overflow: hidden;
   background: url('../img/seal.svg') no-repeat #ccc;
+}
+
+blockquote p {
+  font-family: 'Playball', cursive;
+  font-size: 22px;
 }
 
 section#main .container {
