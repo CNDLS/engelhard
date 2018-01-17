@@ -58,7 +58,6 @@ docs/_build/
 target/
 
 .DS_Store
-*.ttf
 
 #Pycharm
 .idea/
