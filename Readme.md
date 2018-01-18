@@ -17,6 +17,7 @@ I recommend not adding a password to your private key to make things easier.
 * Add your public key to your GitHub account: https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
 * Once the SSH key is set up, install GitKraken, which is a GUI for Git: https://www.gitkraken.com/
 * Once GitKraken is downloaded and installed, log into it using your GitHub credentials.
+* You may be prompted to install the XCode command line developer tools. If so, go ahead.
 * We will use GitKraken to clone (make a local copy of) the repository on GitHub.
 * In GitKraken, click on the the folder icon in the top left corner to open the Repository Management window.
 * In the Repository Management window, click Clone on the left sidebar.
@@ -44,7 +45,7 @@ Python 2.7.14
 * If you see a version before 2.7 or nothing printed at all, please install version 2.7, by visiting the following url: https://www.python.org/downloads/, then clicking on the button 'Download Python 2.7.14', which should download the installer appropriate for your system. Once downloaded, run the installer, and retry the test above to make sure Python was successfully installed.
 
 ### Creating a Virtual Environment in the Project
-
+* First, install the virtualenv package globally for Python 2.7: `pip install virtualenv`.
 * It's good practice to use "virtual environments" in Python which encapsulate the Python interpreter and any Python packages that you use for the project. I usually do this in a directory called `.venv` in the project root directory. Type the following commands in a Terminal window:
 * Navigate to the project root: `cd /path/to/engelhard`
 * If using Python 2, the command to create a virtual environment is: `virtualenv NAME_OF_ENV`
