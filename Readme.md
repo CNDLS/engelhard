@@ -97,3 +97,9 @@ python freeze.py
 We currently use FTP to update files, which necessitates fixing permissions. Here is how to set perms on nested files and folders:
 * `find /path/to/your/dir -type d -exec chmod 775 {} \;`
 * `find /path/to/your/dir -type f -exec chmod 664 {} \;`
+
+And the following commands allow you to bulk change user and group ownership of files and folders, to ensure that all files belong to the group 'cndls-admins'.
+```
+find . -type d -exec chown bb1020:cndls-admins {} \;
+find . -type f -exec chown bb1020:cndls-admins {} \;
+```
