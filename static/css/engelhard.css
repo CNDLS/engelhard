@@ -15,8 +15,9 @@ section#main {
 }
 
 blockquote p {
-  font-family: 'Great Vibes', cursive;
-  font-size: 25px;
+  font-style: italic;
+  font-size: 1.1em;
+  color: black;
 }
 
 section#main .container {
