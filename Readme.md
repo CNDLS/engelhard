@@ -92,6 +92,7 @@ python freeze.py
 ## Workflow When Non-developer Updates Site
 * The editor edits the Jinja2 template, verifies that the changes look good on her local development environment, then commits those changes to Git and pushes the commits to "origin" (GitHub).
 * The developer pulls the changes, compiles the static files, then uses FTP to transmit the changed files.
+* The developer can alternatively use the provided shell script located in ./deploy-scripts/deploy.sh. The script requires a config.sh file (not version-controlled) to enter some of the required variables.
   
 ## Updating Files on Production Server Using FTP
 We currently use FTP to update files, which necessitates fixing permissions. Here is how to set perms on nested files and folders:
