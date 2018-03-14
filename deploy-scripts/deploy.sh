@@ -20,35 +20,39 @@ python freeze.py
 #      -r: Recurse into subdirectories
 #      -v: Increase verbosity
 #      -e: Specify the remote shell to use
+#      -I: Ignore times: don't skip files that match size and time, i.e. overwrite all files at destination
 # --perms: Preserve file permissions 
 # --group: Preserve group
 # A trailing / on a source name means "copy the contents of this directory". 
 # Without a trailing slash it means "copy the directory".
-# In this case, we want to copy the contents of the build directory, just to be safe
-rsync -rv -e 'ssh' --perms --group "${LOCAL_BUILD_DIR}" "${SERVER_USERNAME}@${SERVER}:${SERVER_BUILD_DIR}"
+# In this case, we want to copy the entire directory.
+
+###### Need to figure how to get rsync to overwrite files.
+rsync -rvI -e 'ssh' --perms --group "${LOCAL_BUILD_DIR}" "${SERVER_USERNAME}@${SERVER}:${SERVER_BUILD_DIR}"
 
 # Connect to the server using ssh and change file permissions and groups
-ssh -v "${SERVER_USERNAME}@${SERVER}" <<COMMANDS
-echo 'Changing to server build directory'
-cd ${SERVER_BUILD_DIR}
-pwd
+ssh -v "${SERVER_USERNAME}@${SERVER}" "
+  echo 'Changing to server build directory'
+  cd ${SERVER_BUILD_DIR}
+  pwd
 
-echo 'Listing files in the server build directory before changing groups and permissions'
-ls -al
+  echo 'Listing files in the server build directory before changing groups and permissions'
+  ls -al
 
-echo 'Changing permissions'
-find . -type d -exec chmod 775 {} \;
-find . -type f -exec chmod 664 {} \;
+  echo 'Changing permissions'
+  find . -type d -exec chmod 775 {} \;
+  find . -type f -exec chmod 664 {} \;
 
-echo 'Changing groups and permissions'
-find . -type d -exec chown ${SERVER_USERNAME}:${SERVER_GROUP} {} \;
-find . -type f -exec chown ${SERVER_USERNAME}:${SERVER_GROUP} {} \;
+  echo 'Changing groups and permissions'
+  find . -type d -exec chown ${SERVER_USERNAME}:${SERVER_GROUP} {} \;
+  find . -type f -exec chown ${SERVER_USERNAME}:${SERVER_GROUP} {} \;
 
-echo 'Listing files in the server build directory after changing groups and permissions'
-ls -al
-COMMANDS
+  echo 'Listing files in the server build directory after changing groups and permissions'
+  ls -al
+  "
 
-# Delete the build directory locally
-rm -r "${LOCAL_BUILD_DIR}"
+  # Delete the build directory locally
+  rm -r "${LOCAL_BUILD_DIR}"
+
 
 
