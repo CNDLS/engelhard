@@ -448,7 +448,7 @@ p strong {
 }
 
 #engelhard-carousel {
-  margin-top: 78px;
+  margin-top: 0px;
   /* height: 712px; */
   overflow: hidden;
 }
@@ -530,6 +530,21 @@ h2.warn {
       background-color: #002147
 }
 
+/*for homepage about section */
 #about h2 {
   text-align: center;
+}
+
+#about p {
+  text-align: center;
+}
+
+#about {
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  #about {
+    margin-top: 78px;
+  }
 }
