@@ -545,6 +545,12 @@ h2.warn {
 
 @media screen and (max-width: 1200px) {
   #about {
-    margin-top: 78px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    margin-top: 75px;
   }
 }
