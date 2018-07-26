@@ -27,7 +27,6 @@ python freeze.py
 # Without a trailing slash it means "copy the directory".
 # In this case, we want to copy the entire directory.
 
-###### Need to figure how to get rsync to overwrite files.
 rsync -rvI -e 'ssh' --perms --group "${LOCAL_BUILD_DIR}" "${SERVER_USERNAME}@${SERVER}:${SERVER_BUILD_DIR}"
 
 # Connect to the server using ssh and change file permissions and groups
