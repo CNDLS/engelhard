@@ -448,7 +448,7 @@ p strong {
 }
 
 #engelhard-carousel {
-  margin-top: 0px;
+  margin-top: 78px;
   /* height: 712px; */
   overflow: hidden;
 }
@@ -536,7 +536,7 @@ h2.warn {
 }
 
 #about p {
-  text-align: center;
+  text-align: left;
 }
 
 #about {
