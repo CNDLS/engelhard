@@ -319,8 +319,12 @@ h1 {
 
 .btn {
   margin-right: 10px;
-  font-size: 18px; # for experienced eyes
+  font-size: 18px;
+  background-color: #002247;
+  color: #FFF;
 }
+
+
 
 .progress {
   background: none;

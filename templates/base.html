@@ -46,7 +46,7 @@
                   <li class="hidden">
                     <a href="#page-top"></a>
                   </li>
-                  <li class="page-scroll">
+                  <li>
                     <!-- Navigation Bar -->
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -54,7 +54,7 @@
                       <li><a href="{{ url_for('page', path='impact') }}">Impact</a></li>
                     </ul>
                   </li>
-                  <li class="page-scroll">
+                  <li>
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">Courses<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       <li><a href="{{ url_for('page', path='engelhard-courses') }}">Engelhard Courses</a></li>
@@ -63,7 +63,11 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="{{ url_for('page', path='resources') }}">Campus Resources</a>
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Project Opportunities<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{{ url_for('page', path='grants') }}">Engelhard Grants</a></li>
+                      <li><a href="{{ url_for('page', path='conversations') }}">Conversations on Teaching</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="{{ url_for('page', path='join') }}">Connect with the Project</a>
