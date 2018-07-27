@@ -47,16 +47,20 @@
                     <a href="#page-top"></a>
                   </li>
                   <li class="page-scroll">
-                    <!-- ERIKA NOTE: This is where the navbar edits are!! -->
-                    <a href="{{ url_for('page', path='about') }}" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="{{ url_for('page', path='about') }}">About the Project</a></li>
-                          <li><a href="{{ url_for('page', path='impact') }}">Impact</a></li>
-                          <li><a href="{{ url_for('page', path='faqs') }}">FAQs</a></li>
-                        </ul>
+                    <!-- Navigation Bar -->
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{{ url_for('page', path='about') }}">About the Project</a></li>
+                      <li><a href="{{ url_for('page', path='impact') }}">Impact</a></li>
+                    </ul>
                   </li>
                   <li class="page-scroll">
-                    <a href="{{ url_for('page', path='profiles') }}">Course Profiles</a>
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Courses<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="{{ url_for('page', path='engelhard-courses') }}">Engelhard Courses</a></li>
+                      <li><a href="{{ url_for('page', path='profiles') }}">Course Profiles</a></li>
+                      <li><a href="{{ url_for('page', path='faqs') }}">FAQs</a></li>
+                    </ul>
                   </li>
                   <li>
                     <a href="{{ url_for('page', path='resources') }}">Campus Resources</a>
