@@ -8,15 +8,36 @@
     <li data-target="#engelhard-carousel" data-slide-to="1"></li>
     <li data-target="#engelhard-carousel" data-slide-to="2"></li>
   </ol>
-
-  <!-- Carousel #1: Engelhard Video -->
+  
   <div class="carousel-inner">
+  <!-- Carousel #1, position "0": Engelhard opportunities -->
 
-    <div class="item active embed-responsive">
-      <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <div class="item active" style="background-image: url('{{ url_for('static', filename='img/kilcarrteaching.jpg') }}');">
+    <div class="carousel-caption">
+      <h3>Fall 2018 Engelhard Project Opportunities</h3>
+        <p>As we enter the fall semester, we invite you to explore ways of getting involved in the Engelhard Project. Check out our courses, apply for a grant, or join one of our conversation groups.</p>
+      <p><b><a href="/engelhard-courses/">Engelhard Courses</a></b> | <b><a href="/grants">Grants</a></b> | <b><a href="/conversations/">Conversations on Teaching</a></b></p>
     </div>
+  </div>
 
- <!-- Carousel #2: About Engelhard -->
+  <!-- Carousel #2, position "1": Engelhard Video -->  
+      <div class="item embed-responsive">
+        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+
+  <!-- Carousel #3, position "2": Engelhard Course Profiles -->
+      <div class="item" style="background-image: url('{{ url_for('static', filename='img/rhonda1.jpg') }}');">
+      <div class="carousel-caption">
+        <h3>Engelhard Courses</h3>
+        <p> Engelhard courses use a curriculum infusion model to bring well-being intho the classroom, across a range of schools and disciplines. Take a look at some of the courses faculty have run in the past.</p>
+        <p><b><a href="/profiles/">Engelhard Course Profiles</a></b></p>
+      </div>
+      </div>
+
+
+      </div>    
+
+ <!-- Carousel #2: About Engelhard
      <div class="item" style="background-image: url('{{ url_for('static', filename='img/HealyHall.png') }}');">
       <div class="carousel-caption">
         <h3>About the Project</h3>
@@ -25,14 +46,14 @@
       </div>
     </div>
 
-     <!-- Carousel #3: Engelhard Voices -->
+     Carousel #3: Engelhard Voices 
     <div class="item" style="background-image: url('{{ url_for('static', filename='img/RegentsHall.png') }}');">
       <div class="carousel-caption">
       <h3>Engelhard Stories</h3>
         <p>Over the years, the Engelhard Project continues to grow, reaching more students and classrooms. From classroom snapshots to connections with national conversations, the stories of Engelhard are far-reaching.</p>
         <p><b><a href="{{ url_for('page', path='sharing-our-work') }}">Sharing Our Work</a></b> | <b><a href="/profiles">View Past Course Profiles</a></b></p>
       </div>
-    </div>
+    </div> -->
 
 {#
     <div class="item" style="background-image: url('{{ url_for('static', filename='img/feature-pinkard.jpg') }}');">
