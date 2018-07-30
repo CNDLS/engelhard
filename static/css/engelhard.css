@@ -5,6 +5,11 @@ body {
   font-family: "DINOffcLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.image {
+  display: block;
+  max-width: 100%;
+}
+
 
 p { font-size: 1.1em; }
 
