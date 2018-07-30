@@ -5,9 +5,13 @@ body {
   font-family: "DINOffcLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.image {
+.image-centered-80 {
   display: block;
-  max-width: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
