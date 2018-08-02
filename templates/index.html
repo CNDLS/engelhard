@@ -1,6 +1,4 @@
-{% extends 'base.html' %}
-
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 <div id="engelhard-carousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -8,63 +6,48 @@
     <li data-target="#engelhard-carousel" data-slide-to="1"></li>
     <li data-target="#engelhard-carousel" data-slide-to="2"></li>
   </ol>
-  
+
   <div class="carousel-inner">
-  <!-- Carousel #1, position "0": Engelhard opportunities -->
+    <!-- Carousel #1, position "0": Engelhard opportunities -->
 
-  <div class="item active" style="background-image: url('{{ url_for('static', filename='img/kilcarrteaching.jpg') }}');">
-    <div class="carousel-caption">
-      <h3>Fall 2018 Engelhard Project Opportunities</h3>
-        <p>As we enter the fall semester, we invite you to explore ways of getting involved in the Engelhard Project. Check out our courses, apply for a grant, or join one of our conversation groups.</p>
-      <p><b><a href="/engelhard-courses/">Engelhard Courses</a></b> | <b><a href="/grants">Grants</a></b> | <b><a href="/conversations/">Conversations on Teaching</a></b></p>
-    </div>
-  </div>
-
-  <!-- Carousel #2, position "1": Engelhard Video -->  
-      <div class="item embed-responsive">
-        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="item active" style="background-image: url('{{ url_for('static', filename='img/kilcarrteaching.jpg') }}');">
+      <div class="carousel-caption">
+        <h3>Fall 2018 Engelhard Project Opportunities</h3>
+        <p>As we enter the fall semester, we invite you to explore ways of getting involved in the Engelhard Project. Check
+          out our courses, apply for a grant, or join one of our conversation groups.</p>
+        <p>
+          <b>
+            <a href="/engelhard-courses/">Engelhard Courses</a>
+          </b> |
+          <b>
+            <a href="/grants">Grants</a>
+          </b> |
+          <b>
+            <a href="/conversations/">Conversations on Teaching</a>
+          </b>
+        </p>
       </div>
+    </div>
 
-  <!-- Carousel #3, position "2": Engelhard Course Profiles -->
-      <div class="item" style="background-image: url('{{ url_for('static', filename='img/rhonda1.jpg') }}');">
+    <!-- Carousel #2, position "1": Engelhard Video -->
+    <div class="item embed-responsive">
+      <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0"
+        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <!-- Carousel #3, position "2": Engelhard Course Profiles -->
+    <div class="item" style="background-image: url('{{ url_for('static', filename='img/rhonda1.jpg') }}');">
       <div class="carousel-caption">
         <h3>Engelhard Courses</h3>
-        <p> Engelhard courses use a curriculum infusion model to bring well-being intho the classroom, and span a range of schools and disciplines. Take a look at some of the courses faculty have run in the past.</p>
-        <p><b><a href="/profiles/">Engelhard Course Profiles</a></b></p>
-      </div>
-      </div>
-
-
-      </div>    
-
- <!-- Carousel #2: About Engelhard
-     <div class="item" style="background-image: url('{{ url_for('static', filename='img/HealyHall.png') }}');">
-      <div class="carousel-caption">
-        <h3>About the Project</h3>
-          <p>The Engelhard Project is committed to educating the whole Georgetown student by challenging each to reflect more deeply on learning and to connect course content with personal, lived experience.</p>
-        <p><b><a href="{{ url_for('index') }}#about">Learn more about the Project</a></b> | <b><a href="/faqs">Frequently Asked Questions</a></b></p>
+        <p> Engelhard courses use a curriculum infusion model to bring well-being intho the classroom, and span a range of schools
+          and disciplines. Take a look at some of the courses faculty have run in the past.</p>
+        <p>
+          <b>
+            <a href="/profiles/">Engelhard Course Profiles</a>
+          </b>
+        </p>
       </div>
     </div>
-
-     Carousel #3: Engelhard Voices 
-    <div class="item" style="background-image: url('{{ url_for('static', filename='img/RegentsHall.png') }}');">
-      <div class="carousel-caption">
-      <h3>Engelhard Stories</h3>
-        <p>Over the years, the Engelhard Project continues to grow, reaching more students and classrooms. From classroom snapshots to connections with national conversations, the stories of Engelhard are far-reaching.</p>
-        <p><b><a href="{{ url_for('page', path='sharing-our-work') }}">Sharing Our Work</a></b> | <b><a href="/profiles">View Past Course Profiles</a></b></p>
-      </div>
-    </div> -->
-
-{#
-    <div class="item" style="background-image: url('{{ url_for('static', filename='img/feature-pinkard.jpg') }}');">
-      <a href="{{ url_for('page', path='profiles') }}">
-      <div class="carousel-caption">
-        <h3>Featured Project Profile: Foundations in Biology</h3>
-          <p>Heidi Elmendorf teaches her 250-student introductory biology class as an Engelhard course in order to more fully engage students and humanize the material.</p>
-      </div>
-      </a>
-    </div>
-#}
   </div>
 
   <!-- Controls -->
@@ -76,7 +59,7 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
- <!--  <a class="left carousel-control" href="#engelhard-carousel" data-slide="prev">&lsaquo;</a>
+  <!--  <a class="left carousel-control" href="#engelhard-carousel" data-slide="prev">&lsaquo;</a>
   <a class="right carousel-control" href="#engelhard-carousel" data-slide="prev">&lsaquo;</a> -->
 </div>
 
@@ -85,54 +68,69 @@
     <div class="row">
       <div class="col-xs-12">
         <h2>The Engelhard Project for Connecting Life and Learning</h2>
-        <p class="lead">Embodying Georgetown’s mission of <em>cura personalis</em>, and exemplifying the kind of high-impact learning practice that characterizes a Georgetown education, the Engelhard Project represents an innovative approach to integrating student well-being issues into academic contexts.
-          </p>
-          <p class="lead">
-          The Engelhard Project for Connecting Life and Learning focuses on teaching to the whole student. By incorporating health and well-being issues into the classroom, the Project enhances academic learning, encourages students to reflect on their own attitudes and behaviors, and fosters connections both in and out of the classroom.
-          </p>
-          <p class="lead">
-          If you’d like to get involved in the Project, you can explore our curricular infusion model in our <a href="engelhard-courses"><b style="color:#0071a1">courses</b></a>, or check out other opportunities to join the Project through <a href="/grants/"><b style="color:#0071a1">grants</b></a> or <a href="/conversations/"><b style="color:#0071a1">conversation groups</b></a>. And please don’t hesitate to <a href="/connect/"><b style="color:#0071a1">reach out to us</b></a>!
-          </p>
-          <p class="lead">
-          <em>The Engelhard Project is made possible by an endowment from the Charles Engelhard Foundation, with additional support from alumni and parents.</em>
-          </p>
+        <p class="lead">Embodying Georgetown’s mission of
+          <em>cura personalis</em>, and exemplifying the kind of high-impact learning practice that characterizes a Georgetown
+          education, the Engelhard Project represents an innovative approach to integrating student well-being issues into
+          academic contexts.
+        </p>
+        <p class="lead">
+          The Engelhard Project for Connecting Life and Learning focuses on teaching to the whole student. By incorporating health
+          and well-being issues into the classroom, the Project enhances academic learning, encourages students to reflect
+          on their own attitudes and behaviors, and fosters connections both in and out of the classroom.
+        </p>
+        <p class="lead">
+          If you’d like to get involved in the Project, you can explore our curricular infusion model in our
+          <a href="engelhard-courses">
+            <b style="color:#0071a1">courses</b>
+          </a>, or check out other opportunities to join the Project through
+          <a href="/grants/">
+            <b style="color:#0071a1">grants</b>
+          </a> or
+          <a href="/conversations/">
+            <b style="color:#0071a1">conversation groups</b>
+          </a>. And please don’t hesitate to
+          <a href="/connect/">
+            <b style="color:#0071a1">reach out to us</b>
+          </a>!
+        </p>
+        <p class="lead">
+          <em>The Engelhard Project is made possible by an endowment from the Charles Engelhard Foundation, with additional support
+            from alumni and parents.</em>
+        </p>
       </div>
     </div>
-  </div>    
+  </div>
 </section>
 
-{% endblock %}
-
-{% block postscript %}
+{% endblock %} {% block postscript %}
 <script type="text/javascript">
-$(document).ready(function() {
-  $(window).load(function(){
-    // Remove the # from the hash, as different browsers may or may not include it
-    var hash = location.hash.replace('#','');
+  $(document).ready(function () {
+    $(window).load(function () {
+      // Remove the # from the hash, as different browsers may or may not include it
+      var hash = location.hash.replace('#', '');
 
-    if(hash != ''){
+      if (hash != '') {
 
-       // Clear the hash in the URL
-       // location.hash = '';   // delete front "//" if you want to change the address bar
-        $('html, body').animate({ scrollTop: $('#about').offset().top - 60}, 500);
+        // Clear the hash in the URL
+        // location.hash = '';   // delete front "//" if you want to change the address bar
+        $('html, body').animate({ scrollTop: $('#about').offset().top - 60 }, 500);
 
-       }
-   });
-  // smooth scrolling
-  $(function() {
-    $('li.page-scroll a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top - 60
-          }, 1000);
-          return false;
-        }
       }
     });
+    // smooth scrolling
+    $(function () {
+      $('li.page-scroll a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html,body').animate({
+              scrollTop: target.offset().top - 60
+            }, 1000);
+            return false;
+          }
+        }
+      });
+    });
   });
-});
-</script>
-{% endblock %}
+</script> {% endblock %}
