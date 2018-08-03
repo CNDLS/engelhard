@@ -17,13 +17,13 @@
           out our courses, apply for a grant, or join one of our conversation groups.</p>
         <p>
           <b>
-            <a href="/engelhard-courses/">Engelhard Courses</a>
+            <a href="{{ url_for('page', path='engelhard-courses') }}">Engelhard Courses</a>
           </b> |
           <b>
-            <a href="/grants">Grants</a>
+            <a href="{{ url_for('page', path='grants') }}">Grants</a>
           </b> |
           <b>
-            <a href="/conversations/">Conversations on Teaching</a>
+            <a href="{{ url_for('page', path='conversations') }}">Conversations on Teaching</a>
           </b>
         </p>
       </div>
@@ -43,7 +43,7 @@
           and disciplines. Take a look at some of the courses faculty have run in the past.</p>
         <p>
           <b>
-            <a href="/profiles/">Engelhard Course Profiles</a>
+            <a href="{{ url_for('page', path='profiles') }}">Engelhard Course Profiles</a>
           </b>
         </p>
       </div>
@@ -80,16 +80,16 @@
         </p>
         <p class="lead">
           If you’d like to get involved in the Project, you can explore our curricular infusion model in our
-          <a href="engelhard-courses">
+          <a href="{{ url_for('page', path='engelhard-courses') }}">
             <b style="color:#0071a1">courses</b>
           </a>, or check out other opportunities to join the Project through
-          <a href="/grants/">
+          <a href="{{ url_for('page', path='grants') }}">
             <b style="color:#0071a1">grants</b>
           </a> or
-          <a href="/conversations/">
+          <a href="{{ url_for('page', path='conversations') }}">
             <b style="color:#0071a1">conversation groups</b>
           </a>. And please don’t hesitate to
-          <a href="/connect/">
+          <a href="{{ url_for('page', path='connect') }}">
             <b style="color:#0071a1">reach out to us</b>
           </a>!
         </p>
