@@ -1,16 +1,32 @@
 {% extends 'base.html' %} {% block content %}
-<div id="engelhard-carousel" class="carousel slide" data-ride="carousel">
+<!-- data-interval="false" tells the carousel not to autoplay, do give users with disabilities enough time to interact with content.-->
+<!-- Also, auto-playing carousels are distracting. -->
+<div id="engelhard-carousel" class="carousel slide" data-interval="false">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#engelhard-carousel" data-slide-to="0" class="active"></li>
     <li data-target="#engelhard-carousel" data-slide-to="1"></li>
     <li data-target="#engelhard-carousel" data-slide-to="2"></li>
+    <li data-target="#engelhard-carousel" data-slide-to="3"></li>
   </ol>
 
   <div class="carousel-inner">
-    <!-- Carousel #1, position "0": Engelhard news -->
-
-    <div class="item active" style="background-image: url('{{ url_for('static', filename='img/kilcarrteaching.jpg') }}');">
+    <div class="item active" style="background-image: url('{{ url_for('static', filename='img/sally-engelhard-pingree.jpg') }}');">
+      <div class="carousel-caption">
+        <h3>Sally Engelhard Pingree, CNDLS Fellow and Engelhard Project Supporter, Honored with Patrick Healy, S.J. Award</h3>
+        <p>CNDLS joins the Georgetown community in congratulating CNDLS Fellow Sally Engelhard Pingree for receiving
+          the prestigious 2019 Patrick Healy, S.J. Award at John Carroll Weekend in Boston this May. The award is
+          conferred upon an individual who is not an alumnus/a, and whose achievements and record of service exemplify
+          the ideals and traditions of Georgetown. Pingree helped to launch and is a continuous supporter of the
+          Engelhard Project.</p>
+        <p>
+          <b>
+            <a href="https://jcw.georgetown.edu/2019/awardee/sally-engelhard-pingree">Learn more about Sally and the Patrick Healy, S.J. Award</a>
+          </b>
+        </p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url('{{ url_for('static', filename='img/kilcarrteaching.jpg') }}');">
       <div class="carousel-caption">
         <h3>Engelhard Project featured in <i>Conversations</i> Magazine</h3>
         <p>The Engelhard Project recently published an article in <i>Conversations on Jesuit Higher Education</i> on how integrating mental health and well-being into courses helps students connect their lives with their academic learning.
@@ -22,14 +38,11 @@
         </p>
       </div>
     </div>
-
-    <!-- Carousel #2, position "1": Engelhard Video -->
+    <!-- Engelhard video as a slide -->
     <div class="item embed-responsive">
       <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0"
         webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
-
-    <!-- Carousel #3, position "2": Engelhard Course Profiles -->
     <div class="item" style="background-image: url('{{ url_for('static', filename='img/rhonda1.jpg') }}');">
       <div class="carousel-caption">
         <h3>Engelhard Courses</h3>
@@ -53,8 +66,6 @@
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-  <!--  <a class="left carousel-control" href="#engelhard-carousel" data-slide="prev">&lsaquo;</a>
-  <a class="right carousel-control" href="#engelhard-carousel" data-slide="prev">&lsaquo;</a> -->
 </div>
 
 <section id="about" class="blue">
