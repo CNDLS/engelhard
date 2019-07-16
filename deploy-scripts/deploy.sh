@@ -39,8 +39,8 @@ ssh -v "${SERVER_USERNAME}@${SERVER}" "
   ls -al
 
   echo 'Changing permissions'
-  find . -type d -exec chmod 775 {} \;
-  find . -type f -exec chmod 664 {} \;
+  find . -type d -exec chmod 755 {} \;
+  find . -type f -exec chmod 644 {} \;
 
   echo 'Changing groups and permissions'
   find . -type d -exec chown ${SERVER_USERNAME}:${SERVER_GROUP} {} \;
