@@ -2,128 +2,123 @@
 <!-- data-interval="false" tells the carousel not to autoplay, do give users with disabilities enough time to interact with content.-->
 <!-- Also, auto-playing carousels are distracting. -->
 <div id="engelhard-carousel" class="carousel slide" data-interval="false">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#engelhard-carousel" data-slide-to="0" class="active"></li>
-    <li data-target="#engelhard-carousel" data-slide-to="1"></li>
-    <li data-target="#engelhard-carousel" data-slide-to="2"></li>
-    <li data-target="#engelhard-carousel" data-slide-to="3"></li>
-  </ol>
+	<!-- Indicators -->
+	<ol class="carousel-indicators">
+		<li data-target="#engelhard-carousel" data-slide-to="0" class="active"></li>
+		<li data-target="#engelhard-carousel" data-slide-to="1"></li>
+		<li data-target="#engelhard-carousel" data-slide-to="2"></li>
+		<li data-target="#engelhard-carousel" data-slide-to="3"></li>
+	</ol>
 
-  <div class="carousel-inner">
-    <div class="item active" style="background-image: url('{{ url_for('static', filename='img/sally-engelhard-pingree.jpg') }}');">
-      <div class="carousel-caption">
-        <h3>Sally Engelhard Pingree, CNDLS Fellow and Engelhard Project Supporter, Honored with Patrick Healy, S.J. Award</h3>
-        <p>CNDLS joins the Georgetown community in congratulating CNDLS Fellow Sally Engelhard Pingree for receiving
-          the prestigious 2019 Patrick Healy, S.J. Award at John Carroll Weekend in Boston this May. The award is
-          conferred upon an individual who is not an alumnus/a, and whose achievements and record of service exemplify
-          the ideals and traditions of Georgetown. Pingree helped to launch and is a continuous supporter of the
-          Engelhard Project.</p>
-        <p>
-          <b>
-            <a href="https://jcw.georgetown.edu/2019/awardee/sally-engelhard-pingree">Learn more about Sally and the Patrick Healy, S.J. Award</a>
-          </b>
-        </p>
-      </div>
-    </div>
-    <div class="item" style="background-image: url('{{ url_for('static', filename='img/kilcarrteaching.jpg') }}');">
-      <div class="carousel-caption">
-        <h3>Engelhard Project featured in <i>Conversations</i> Magazine</h3>
-        <p>The Engelhard Project recently published an article in <i>Conversations on Jesuit Higher Education</i> on how integrating mental health and well-being into courses helps students connect their lives with their academic learning.
-        </p>
-        <p>
-          <b>
-            <a href="http://www.conversationsmagazine.org/current-issue/">Read our article in Conversations</a> | <a href="{{ url_for('page', path='impact') }}">Read more about our impact</a>
-          </b>
-        </p>
-      </div>
-    </div>
-    <!-- Engelhard video as a slide -->
-    <div class="item embed-responsive">
-      <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0"
-        webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </div>
-    <div class="item" style="background-image: url('{{ url_for('static', filename='img/rhonda1.jpg') }}');">
-      <div class="carousel-caption">
-        <h3>Engelhard Courses</h3>
-        <p> Engelhard courses use a curriculum infusion model to bring well-being into the classroom, and span a range of schools
-          and disciplines. Take a look at some of the courses faculty have run in the past.</p>
-        <p>
-          <b>
-            <a href="{{ url_for('page', path='profiles') }}">Engelhard Course Profiles</a>
-          </b>
-        </p>
-      </div>
-    </div>
-  </div>
+	<div class="carousel-inner">
+		<div class="item active" style="background-image: url('{{ url_for('static', filename='img/sally-engelhard-pingree.jpg') }}');">
+			<div class="carousel-caption">
+				<h3>Sally Engelhard Pingree, CNDLS Fellow and Engelhard Project Supporter, Honored with Patrick Healy, S.J. Award</h3>
+				<p>CNDLS joins the Georgetown community in congratulating CNDLS Fellow Sally Engelhard Pingree for receiving
+					the prestigious 2019 Patrick Healy, S.J. Award at John Carroll Weekend in Boston this May. The award is
+					conferred upon an individual who is not an alumnus/a, and whose achievements and record of service exemplify
+					the ideals and traditions of Georgetown. Pingree helped to launch and is a continuous supporter of the
+					Engelhard Project.</p>
+				<p>
+					<b>
+						<a href="https://jcw.georgetown.edu/2019/awardee/sally-engelhard-pingree">Learn more about Sally and the Patrick Healy, S.J. Award</a>
+					</b>
+				</p>
+			</div>
+		</div>
+		<div class="item" style="background-image: url('{{ url_for('static', filename='img/kilcarrteaching.jpg') }}');">
+			<div class="carousel-caption">
+				<h3>Engelhard Project featured in <i>Conversations</i> Magazine</h3>
+				<p>The Engelhard Project recently published an article in <i>Conversations on Jesuit Higher Education</i> on how integrating mental health and well-being into courses helps students connect their lives with their academic learning.
+				</p>
+				<p>
+					<b>
+						<a href="http://www.conversationsmagazine.org/current-issue/">Read our article in Conversations</a> | <a href="{{ url_for('page', path='impact') }}">Read more about our impact</a>
+					</b>
+				</p>
+			</div>
+		</div>
+		<!-- Engelhard video as a slide -->
+		<div class="item embed-responsive">
+			<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/141193216" width="500" height="281" frameborder="0"
+				webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		</div>
+		<div class="item" style="background-image: url('{{ url_for('static', filename='img/rhonda1.jpg') }}');">
+			<div class="carousel-caption">
+				<h3>Engelhard Courses</h3>
+				<p> Engelhard courses use a curriculum infusion model to bring well-being into the classroom, and span a range of schools
+					and disciplines. Take a look at some of the courses faculty have run in the past.</p>
+				<p>
+					<b>
+						<a href="{{ url_for('page', path='profiles') }}">Engelhard Course Profiles</a>
+					</b>
+				</p>
+			</div>
+		</div>
+	</div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#engelhard-carousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#engelhard-carousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+	<!-- Controls -->
+	<a class="left carousel-control" href="#engelhard-carousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#engelhard-carousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
 </div>
 
 <section id="about" class="blue">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <h2>The Engelhard Project for Connecting Life and Learning</h2>
-        <p class="lead">Embodying Georgetown’s mission of
-          <em>cura personalis</em>, and exemplifying the kind of high-impact learning practice that characterizes a Georgetown
-          education, the Engelhard Project represents an innovative approach to integrating student well-being issues into
-          academic contexts.
-        </p>
-        <p class="lead">
-          The Engelhard Project for Connecting Life and Learning focuses on teaching to the whole student. By incorporating health
-          and well-being issues into the classroom, the Project enhances academic learning, encourages students to reflect
-          on their own attitudes and behaviors, and fosters connections both in and out of the classroom.
-        </p>
-        <p class="lead">
-          If you’d like to get involved in the Project, you can explore our curricular infusion model in our <a href="{{ url_for('page', path='engelhard-courses') }}"> <b style="color:#0071a1">courses</b></a>, or check out other opportunities to join the Project through <a href="{{ url_for('page', path='grants') }}"> <b style="color:#0071a1">grants</b> </a> or<a href="{{ url_for('page', path='conversations') }}"> <b style="color:#0071a1">Conversation groups</b></a>. And please don’t hesitate to<a href="{{ url_for('page', path='connect') }}"> <b style="color:#0071a1">reach out to us</b></a>!
-        </p>
-        <p class="lead">
-          <em>The Engelhard Project is made possible by an endowment from the Charles Engelhard Foundation, with additional support
-            from alumni and parents.</em>
-        </p>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h2>The Engelhard Project for Connecting Life and Learning</h2>
+				<p class="lead">
+					Embodying Georgetown’s mission of cura personalis, and exemplifying the kind of high-impact learning practice that characterizes a Georgetown education, the Engelhard Project represents an innovative approach to integrating student well-being issues into academic contexts.
+				</p>
+				<p class="lead">
+					The Engelhard Project for Connecting Life and Learning builds on the principles of whole person education by supporting faculty and campus resource professionals as partners in incorporating health and well-being issues into the classroom. This curricular approach enhances academic learning, encourages students to reflect on their own attitudes and behaviors, and fosters faculty, staff, and student connections both in and out of the classroom that support students’ engagement in their learning.
+				</p>
+				<p class="lead">
+					If you’d like to get involved in the Project, please explore more about <a style="color: #0071a1;" href="{{ url_for('page', path='engelhard-courses') }}">Engelhard courses here</a> and consider <a style="color: #0071a1;" href="https://forms.gle/48aGhuvdvKudCmof9" target="__blank">proposing an Engelhard course</a> you would like to offer, or check out other opportunities to join the Project through grants or Conversation groups. Please don’t hesitate to reach out to us with your ideas and/or questions!
+				</p>
+				<p class="lead">
+					The Engelhard Project is made possible by an endowment from the Charles Engelhard Foundation, with additional support from alumni and parents.
+				</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 {% endblock %} {% block postscript %}
 <script type="text/javascript">
-  $(document).ready(function () {
-    $(window).load(function () {
-      // Remove the # from the hash, as different browsers may or may not include it
-      var hash = location.hash.replace('#', '');
+	$(document).ready(function () {
+		$(window).load(function () {
+			// Remove the # from the hash, as different browsers may or may not include it
+			var hash = location.hash.replace('#', '');
 
-      if (hash != '') {
+			if (hash != '') {
 
-        // Clear the hash in the URL
-        // location.hash = '';   // delete front "//" if you want to change the address bar
-        $('html, body').animate({ scrollTop: $('#about').offset().top - 60 }, 500);
+				// Clear the hash in the URL
+				// location.hash = '';   // delete front "//" if you want to change the address bar
+				$('html, body').animate({ scrollTop: $('#about').offset().top - 60 }, 500);
 
-      }
-    });
-    // smooth scrolling
-    $(function () {
-      $('li.page-scroll a[href*=#]:not([href=#])').click(function () {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top - 60
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-  });
+			}
+		});
+		// smooth scrolling
+		$(function () {
+			$('li.page-scroll a[href*=#]:not([href=#])').click(function () {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top - 60
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+	});
 </script> {% endblock %}
