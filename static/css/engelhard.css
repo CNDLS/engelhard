@@ -33,6 +33,10 @@ section#main .container {
   margin-top: 80px;
 }
 
+section#page-main .container {
+  min-height: 946px; 
+}
+
 .glyphicon-menu-hamburger { color: #fff; }
 
 .tier-intro {
