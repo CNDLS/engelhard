@@ -5,44 +5,58 @@ from flask_flatpages import FlatPages, pygmented_markdown
 app = Flask(__name__)
 pages = FlatPages(app)
 
+
 # define a custom renderer to enable url_for in flatpages
 def prerender_jinja(text):
-  prerendered_body = render_template_string(Markup(text))
-  return pygmented_markdown(prerendered_body)
+    prerendered_body = render_template_string(Markup(text))
+    return pygmented_markdown(prerendered_body)
 
-APP_PREFIX='/'
+
+APP_PREFIX = '/'
 app.config.update(dict(
-  FREEZER_DESTINATION = 'build',
-  FREEZER_DESTINATION_IGNORE = ['.GIT*', 'CNAME', '.gitignore', 'readme.md'],
-  FREEZER_BASE_URL = 'http://engelhard.georgetown.edu' + APP_PREFIX,
-  FREEZER_RELATIVE_URLS = False,
-  FLATPAGES_HTML_RENDERER = prerender_jinja,
-))
+    FREEZER_DESTINATION='build',
+    FREEZER_DESTINATION_IGNORE=['.GIT*', 'CNAME', '.gitignore', 'readme.md'],
+    FREEZER_BASE_URL='http://engelhard.georgetown.edu' + APP_PREFIX,
+    FREEZER_RELATIVE_URLS=False,
+    FLATPAGES_HTML_RENDERER=prerender_jinja,
+    ))
 
 profiles = []
+stories = []
 for p in pages:
-  if ('profiles' in p.path) and p.body:
-    profiles.append(p)
+    if ('profiles' in p.path) and p.body:
+        profiles.append(p)
+    elif ('stories' in p.path) and p.body:
+        stories.append(p)
 profiles = sorted(profiles, key=lambda k: (k.meta['faculty']))
+stories = sorted(stories, key=lambda k: (k.meta['professor']))
+
 
 # routes
-
 @app.route('/')
 def index():
-  return render_template('index.html')
+    return render_template('index.html')
+
 
 @app.route('/profiles/')
 def profile_list():
-  return render_template('profile_list.html', profiles=profiles)
+    return render_template('profile_list.html', profiles=profiles)
+
+
+@app.route('/stories/')
+def faculty_stories():
+    return render_template('story_list.html', stories=stories)
+
 
 @app.route('/<path:path>/')
 def page(path):
-  page = pages.get_or_404(path)
-  if 'profiles' in page.path:
-    template = page.meta.get('template', 'profile_detail.html')
-  else:
-    template = page.meta.get('template', 'page.html')
-  return render_template(template, page=page)
+    page = pages.get_or_404(path)
+    if 'profiles' in page.path:
+        template = page.meta.get('template', 'profile_detail.html')
+    else:
+        template = page.meta.get('template', 'page.html')
+    return render_template(template, page=page)
+
 
 if __name__ == '__main__':
-  app.run(debug=True)
+    app.run(debug=True)
