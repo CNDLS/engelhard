@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ | Profiles
+{% endblock %}
+
+{% block head %}
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/stories.css') }}" />
+{% endblock %}
+
+{% block content %}
+<section>
+<div class="container">
+  <h1>Faculty Stories</h1>
+  <div class="row">
+    <div class="col-md-12">
+      <p class="lead">Learn how Engelhard faculty fellows are helping to improve student well-being while building a supportive community among themselves that centers around mindful pedagogy.</p>
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <div class="gutter-sizer"></div>
+      {% for story in stories %}
+        <div class="grid-item panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">{{ story.professor }}</h2>
+          </div>
+          <div class="panel-body">
+              <p class="muted">{{ story.title}}</p>
+              <h4>{{ story.department }}</h4>
+            <hr />
+            <p>{{ story.quote|safe }}</p>
+          </div>
+        </div>
+      {% endfor %}
+      </div><!-- /.grid -->
+    </div><!-- /.col -->
+  </div><!-- /.row -->
+
+</div><!-- /.container -->
+</section>
+{% endblock %}
+
+{% block postscript %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+
+<script type="text/javascript">
+var $container = $('.grid').imagesLoaded( function() {
+  $container.isotope({
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    layoutMode: 'masonry',
+    masonry: {
+      columnWidth: '.grid-sizer',
+      gutter: '.gutter-sizer',
+    },
+  });
+});
+</script>
+{% endblock %}
