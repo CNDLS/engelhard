@@ -477,7 +477,7 @@ p strong {
 
 #engelhard-carousel .carousel-caption { background-color: rgba(0, 0, 0, 0.8); text-align: left; padding: 0 30px 15px 30px; bottom: 80px; }
 
-.project-title { margin-top: 0; }
+.project-title .story-title { margin-top: 0; }
 .profile-text { padding-top: 68px; }
 .project-meta li { font-family: 'DINOffcBold'; color: #666; }
 

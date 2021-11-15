@@ -19,9 +19,21 @@ hr {
     font-style: italic;
     text-emphasis-color: #002247;
     font-weight: bolder;
+    font-size: medium;
 }
 h5 {
     text-transform: uppercase;
+}
+
+.story-text p {
+    padding-top: 55px;
+}
+
+.story-meta li {
+    font-family: 'DINOffcBold';
+    color: #666;
+    font-size: medium;
+    font-style: italic;
 }
 
 @media (max-width: 768px) {
@@ -32,6 +44,6 @@ h5 {
 
 @media (min-width: 991px) {
     .panel-body {
-        height: 400px;
+        height: 450px;
     }
 }

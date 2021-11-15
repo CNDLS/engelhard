@@ -50,12 +50,14 @@ def faculty_stories():
 
 @app.route('/<path:path>/')
 def page(path):
-    page = pages.get_or_404(path)
-    if 'profiles' in page.path:
-        template = page.meta.get('template', 'profile_detail.html')
+    pge = pages.get_or_404(path)
+    if 'profiles' in pge.path:
+        template = pge.meta.get('template', 'profile_detail.html')
+    elif 'stories' in pge.path:
+        template = pge.meta.get('template', 'story_detail.html')
     else:
-        template = page.meta.get('template', 'page.html')
-    return render_template(template, page=page)
+        template = pge.meta.get('template', 'page.html')
+    return render_template(template, page=pge)
 
 
 if __name__ == '__main__':

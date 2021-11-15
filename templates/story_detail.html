@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+ | {{ page.title }}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stories.css') }}"/>
+{% endblock %}
+
+{% block content %}
+<section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <h4>Faculty Story</h4>
+      <h1 class="story-title">{{ page.professor }}</h1>
+      <ul class="list-unstyled story-meta">
+        <li>{{ page.title }}</li>
+        <li>{{ page.department }}</li>
+      </ul>
+      
+      <ul class="list-unstyled">
+        {% for course in page.course %}
+        <li><span class="label label-default">{{ course }}</span></li>
+        {% endfor %}
+      </ul>
+    </div><!-- /.col -->
+    <div class="col-md-5 story-text">
+      {{ page.html|safe }}
+    </div><!-- /.col -->
+    {% if page.quote %}
+    <div class="col-md-4 quote-col">
+      <blockquote>
+        <p>{{ page.quote }}</p>
+        {% if page.quote_attribution %}<footer>{{ page.quote_attribution }}</footer>{% endif %}
+      </blockquote>
+    </div>
+    {% endif %}
+  </div><!-- /.row -->
+</div><!-- /.container -->
+</section>
+{% endblock %}

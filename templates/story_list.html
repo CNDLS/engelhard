@@ -1,66 +1,73 @@
 {% extends 'base.html' %}
 
 {% block title %}
- | Profiles
+    | Profiles
 {% endblock %}
 
 {% block head %}
-     <link rel="stylesheet" href="{{ url_for('static', filename='css/stories.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/stories.css') }}"/>
 {% endblock %}
 
 {% block content %}
-<section>
-<div class="container">
-    <h1>Faculty Stories</h1>
-    <div class="row">
-        <div class="col-md-12">
-            <p class="lead">Learn how Engelhard faculty fellows are helping to improve student well-being while building
-                a supportive community among themselves that centers around mindful pedagogy.</p>
-        </div>
-    </div>
-    <div class="row ">
-        {% for story in stories %}
-            <div class="col-xs-12 col-sm-6 panel panel-default ">
-                <div class="panel-heading">
-                    <h2 class="panel-title">{{ story.professor }}</h2>
-                </div>
-                <div class="panel-body">
-
-                    <div style="text-align: center">
-                        <img src="/static/img/alk34.2e16d0ba.fill-165x165.jpg">
-                        <!--<i class="fa fa-user fa-5x fa-fw"></i>-->
-                    </div>
-                    <div>
-                        <h3 class="muted">{{ story.title }}</h3>
-                        <h5>{{ story.department }}</h5>
-                    </div>
-
-                    <hr/>
-                    <p>{{ story.quote }}</p>
+    <section>
+        <div class="container">
+            <h1>Faculty Stories</h1>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead">Learn how Engelhard faculty fellows are helping to improve student well-being while
+                        building
+                        a supportive community among themselves that centers around mindful pedagogy.</p>
                 </div>
             </div>
-        {% endfor %}
-    </div>
+            <div class="row ">
+                {% for story in stories %}
+                    <a href="{{ url_for('page', path=story.path) }}">
+                        <div class="col-xs-12 col-sm-6 col-md-4 panel panel-default ">
 
-</div><!-- /.container -->
-</section>
+
+
+                        <div class="panel-heading">
+                            <h2 class="panel-title">{{ story.professor }}</h2>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="/static/img/alk34.2e16d0ba.fill-165x165.jpg">
+                                    {#                        <i class="fa fa-user fa-5x fa-fw"></i>#}
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="muted">{{ story.title }}</p>
+                                    <h4>{{ story.department }}</h4>
+                                </div>
+                            </div>
+                            <hr/>
+                            <p>{{ story.quote }}</p>
+                        </div>
+                    </div>
+                    </a>
+                {% endfor %}
+            </div>
+
+        </div><!-- /.container -->
+    </section>
 {% endblock %}
 
 {% block postscript %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.1.8/imagesloaded.pkgd.min.js"></script>
 
-<script type="text/javascript">
-var $container = $('.grid').imagesLoaded( function() {
-  $container.isotope({
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    layoutMode: 'masonry',
-    masonry: {
-      columnWidth: '.grid-sizer',
-      gutter: '.gutter-sizer',
-    },
-  });
-});
-</script>
+    <script type="text/javascript">
+        var $container = $('.grid').imagesLoaded(function () {
+            $container.isotope({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                layoutMode: 'masonry',
+                masonry: {
+                    columnWidth: '.grid-sizer',
+                    gutter: '.gutter-sizer',
+                },
+            });
+        });
+    </script>
 {% endblock %}
