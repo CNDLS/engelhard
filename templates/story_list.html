@@ -11,29 +11,36 @@
 {% block content %}
 <section>
 <div class="container">
-  <h1>Faculty Stories</h1>
-  <div class="row">
-    <div class="col-md-12">
-      <p class="lead">Learn how Engelhard faculty fellows are helping to improve student well-being while building a supportive community among themselves that centers around mindful pedagogy.</p>
-      <div class="grid">
-        <div class="grid-sizer"></div>
-        <div class="gutter-sizer"></div>
-      {% for story in stories %}
-        <div class="grid-item panel panel-default">
-          <div class="panel-heading">
-            <h2 class="panel-title">{{ story.professor }}</h2>
-          </div>
-          <div class="panel-body">
-              <p class="muted">{{ story.title}}</p>
-              <h4>{{ story.department }}</h4>
-            <hr />
-            <p>{{ story.quote|safe }}</p>
-          </div>
+    <h1>Faculty Stories</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <p class="lead">Learn how Engelhard faculty fellows are helping to improve student well-being while building
+                a supportive community among themselves that centers around mindful pedagogy.</p>
         </div>
-      {% endfor %}
-      </div><!-- /.grid -->
-    </div><!-- /.col -->
-  </div><!-- /.row -->
+    </div>
+    <div class="row ">
+        {% for story in stories %}
+            <div class="col-xs-12 col-sm-6 panel panel-default ">
+                <div class="panel-heading">
+                    <h2 class="panel-title">{{ story.professor }}</h2>
+                </div>
+                <div class="panel-body">
+
+                    <div style="text-align: center">
+                        <img src="/static/img/alk34.2e16d0ba.fill-165x165.jpg">
+                        <!--<i class="fa fa-user fa-5x fa-fw"></i>-->
+                    </div>
+                    <div>
+                        <h3 class="muted">{{ story.title }}</h3>
+                        <h5>{{ story.department }}</h5>
+                    </div>
+
+                    <hr/>
+                    <p>{{ story.quote }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 
 </div><!-- /.container -->
 </section>
