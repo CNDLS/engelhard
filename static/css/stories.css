@@ -2,12 +2,11 @@
     margin-top: 20px;
 }
 .panel-body {
-    height: 450px;
+    height: 350px;
     align-items: center;
 }
 
-hr {
-    /*margin-top: unset;*/
+.panel-body hr {
     border-bottom: 1px solid #ddd;
 }
 
@@ -45,14 +44,17 @@ h5 {
     font-style: italic;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .panel-body {
-        height: 400px;
+        height: 425px;
+    }
+    .panel-body hr {
+         margin-top: unset;
     }
 }
 
-@media (max-width: 991px) {
-    .panel-body {
-        height: 450px;
+@media (min-width: 991px) {
+    .panel-body img {
+        height: 100px;
     }
 }
