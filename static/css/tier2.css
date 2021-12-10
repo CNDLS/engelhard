@@ -99,3 +99,10 @@ font-size: 1.1em;
   margin-left: 2.14285714em;
   list-style-type: none;
   }
+
+@media (max-width:512px) {
+    #itel-nav h1 {
+        margin-top: -20px;
+    }
+    
+}
