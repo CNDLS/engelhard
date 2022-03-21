@@ -39,6 +39,9 @@ h5 {
     padding-top: 15px;
 }
 
+.story-image{
+    width: 80%;
+}
 .story-meta li {
     font-family: 'DINOffcBold';
     color: #666;
@@ -58,8 +61,15 @@ h5 {
     }
 }
 
+@media (max-width: 991px) {
+    .story-image {
+        width: 30%;
+    }
+}
+
 @media(max-width:767px){
     .panel-body {
     height: 280px;
 }
+
 }
