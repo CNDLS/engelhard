@@ -22,7 +22,7 @@
             <div class="row ">
                 {% for story in stories %}
                     <a href="{{ url_for('page', path=story.path) }}">
-                        <div class="col-xs-12 col-sm-6 col-md-4 panel panel-default ">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 panel panel-default ">
 
 
                             <div class="panel-heading">
@@ -32,15 +32,19 @@
 
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img src="/static/img/{{ story.image }}.png" alt="{{ story.professor }}">
+                                        {% if story.image %}
+                                            <img src="/static/img/{{ story.image }}.png" alt="{{ story.professor }}">
+                                        {% else %}
+                                            <i class="fa fa-user fa-5x fa-fw"></i>
+                                        {% endif %}
                                     </div>
-                                    <div class="col-md-8">
+                                    <div class="col-md-8 info">
                                         <p class="muted">{{ story.title }}</p>
                                         <h4>{{ story.department }}</h4>
                                     </div>
                                 </div>
                                 <hr/>
-                                <p>{{ story.quote|truncate(200) }}</p>
+                                <p class="quote">{{ story.quote|truncate(250) }}</p>
                             </div>
                         </div>
                     </a>
