@@ -87,7 +87,7 @@ Debugger PIN: 321-214-230
 * The developer can alternatively use the provided shell script located in ./deploy-scripts/deploy.sh. The script requires a config.sh file (not version-controlled) to enter some of the required variables.
 
 ## Compiling the Site As A Static Site
-* The plugin frozen-flask allows you to compile the dyamic Flask site to a static site (converting the Python templates to HTML). To compile to a static site, run the following:
+* The plugin frozen-flask allows you to compile the dynamic Flask site to a static site (converting the Python templates to HTML). To compile to a static site, run the following:
 ```
 python3 freeze.py
 ```
