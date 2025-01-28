@@ -19,7 +19,7 @@
 .panel-body p {
     font-style: italic;
     color: #333333;
-    font-weight: bolder;
+/*    font-weight: bolder;*/
     font-size: medium;
 }
 
@@ -31,10 +31,10 @@
     padding-bottom: unset;
 }
 
-h1 {
+/*h1 {
     margin-top: unset;
 }
-
+*/
 h5 {
     text-transform: uppercase;
 }
@@ -52,7 +52,6 @@ h5 {
 }
 
 .story-meta li {
-    font-family: 'DINOffcBold';
     color: #666;
     font-size: medium;
     font-style: italic;

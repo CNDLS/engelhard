@@ -380,17 +380,21 @@ h1 {
 .panel {
   margin-bottom: 20px;
   background-color: #fff;
-  border: 1px solid transparent;
+  border: 3px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-a .panel { color: #666; }
+a .panel { color: #666; padding: 15px; }
 .panel-default>.panel-heading {
   color: #fff;
   background-color: #002147;
   border-color: #f5f5f5;
+}
+
+a .panel:hover {
+  border: 3px solid #33a4d4;
 }
 
 .panel-title { font-size: 2em; }
